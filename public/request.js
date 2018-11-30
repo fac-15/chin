@@ -1,12 +1,16 @@
-//make iffy function
-const makeRequest = callback => {
-  let xhr = new XMLHttpRequest();
+
+const makeRequest = (response) => {
+  const xhr = new XMLHttpRequest();
   xhr.onreadystatechange = () => {
-    if (xhr.readyState == 4 && xhr.status == 200) {
-      let coTechObj = JSON.parse(xhr.responseText);
-      callback(coTechObj);
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      const coTechObj = JSON.parse(xhr.responseText);
+      // callback function
+      outputServices(coTechObj);
     }
   };
-  xhr.open("GET", `/onload`, true);
+  xhr.open("GET", `/coTechRequest`, true);
   xhr.send();
 };
+
+// we HAVE to call the function!!!
+makeRequest();

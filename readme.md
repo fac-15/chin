@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/fac-15/chin?branch=staging)](https://travis-ci.org/fac-15/chin)
+
 # Team Chinny Chin CHIN!!!
 
 ![chin](https://media.giphy.com/media/xTiTnzR3oXDcFea0NO/giphy.gif)
@@ -11,6 +13,7 @@
 - run `npm i` to install node modules and dependencies
 - `nodemon ./src/server.js` to run project from root folder
 - `tape ./tests/test.js` to run tests from root folder
+- `npm run dev` to start the project. Go to `http://localhost:4000/` to view
 
 ## Our Process:
 
@@ -25,6 +28,6 @@
 
 ![espionage](https://media.giphy.com/media/ba5g4ID9g5cT6/giphy.gif)
 
-### Just in case this project involves recursive piping
+### Just in case this project involves piping
 
 ![pipe](https://media.giphy.com/media/3orif3H5piwSgUOZj2/giphy.gif)

@@ -57,12 +57,19 @@ const handleCoTechRequest = (req, res) => {
         response.writeHead(404, { "Content-Type": "application/json" });
         response.end("<h1>Sorry, server error.</h1>");
       } else {
+
         let serviceArr = [];
         const services = body.forEach(service => {
-          serviceArr.push(service.title.rendered);
-          serviceArr.push(service.link);
-          serviceArr.push(service.acf.featured_image.sizes.thumbnail)
+
+          // push object to array
+          serviceArr.push({
+            title: service.title.rendered,
+            img: service.acf.featured_image.sizes.thumbnail,
+            url: service.link
+          })
+
         });
+        
         res.writeHead(200, { "Content-Type": "application/json" });
         res.end(JSON.stringify(serviceArr));
       }
